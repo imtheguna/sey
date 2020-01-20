@@ -30,7 +30,7 @@ printf "\e[1;77m / ___|  __  _   _  \e[0m\n"
 printf "\e[1;77m \___ \ / _\ | | | | \e[0m\n"
 printf "\e[1;77m  ___) |  _/ | |_| | \e[0m\n"
 printf "\e[1;77m |____/ \___| \__, | \e[0m\n"
-printf "\e[1;77m              |___/  0.2 \e[0m\n"
+printf "\e[1;77m              |___/   \e[0m\e[1;92m 0.2\e[0m\n"
 
 printf "\n"
 
