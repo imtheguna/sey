@@ -23,26 +23,18 @@ fi
 banner() {
 
 
-printf "\e[1;77m ____      __ ___        _  _      _ _  \e[0m\n"
-printf "\e[1;77m/ ___|    /  /\  \      / /\ \    / /\ \ \e[0m\n"
-printf "\e[1;77m| |      /  /__\  \    / /  \ \  / /  \ \ \e[0m\n"
-printf "\e[1;77m| |__   /  /____\  \  / /    \ \/ /    \ \ \e[0m\n" 
-printf "\e[1;77m\____| /__/      \__\/_/      \__/      \_\ \e[0m\n"
 
-printf "\n"
-printf "\n"
 
 printf "\e[1;77m  ____              \e[0m\n"
 printf "\e[1;77m / ___|  __  _   _  \e[0m\n"
 printf "\e[1;77m \___ \ / _\ | | | | \e[0m\n"
 printf "\e[1;77m  ___) |  _/ | |_| | \e[0m\n"
 printf "\e[1;77m |____/ \___| \__, | \e[0m\n"
-printf "\e[1;77m              |___/  \e[0m\n"
+printf "\e[1;77m              |___/  0.2 \e[0m\n"
 
 printf "\n"
-printf "\n"
 
-printf " \e[1;77m Twin-eng/cam \e[0m \n"
+printf " \e[1;92m Twin-eng/sey \e[0m \n"
 
 printf "\n"
 
