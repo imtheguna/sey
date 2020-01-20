@@ -8,7 +8,7 @@ if [[ $option == 1 || $option == 01 ]]; then
 start1
 
 elif [[ $option == 2 || $option == 02 ]]; then
-start4
+start3
 
 else
 printf "\e[1;93m [!] Invalid option!\e[0m\n"
