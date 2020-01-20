@@ -32,7 +32,7 @@ printf "\e[1;77m\____| /__/      \__\/_/      \__/      \_\ \e[0m\n"
 printf "\n"
 printf "\n"
 
-printf "\e[1;92m  ____              \e"
+printf "\e[1;92m  ____              \e\n"
 printf "\e[1;92m / ___|  __  _   _ \e\n"
 printf "\e[1;92m \___ \ / _\ | | | | \en"
 printf "\e[1;92m  ___) |  _/ | |_| |\e\n"
