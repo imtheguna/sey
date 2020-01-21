@@ -250,6 +250,8 @@ checkfound
 
 ngrok_server1() {
 
+printf "\e\n[1;92m[\e[0m\e[1;77m01\e[0m\e[1;92m]\e[0m\e[1;93m 0.5 sec\e[0m      \e[1;92m[\e[0m\e[1;77m02\e[0m\e[1;92m]\e[0m\e[1;93m 10 sec\e[0m\n"
+read -p $'\n\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Choose an option: \e[0m\en' option
 
 if [[ -e ngrok ]]; then
 echo ""
@@ -294,8 +296,6 @@ sleep 10
 link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
 printf "\e[1;92m[\e[0m*\e[1;92m] Direct link:\e[0m\e[1;77m %s\e[0m\n" $link
 
-printf "\e\n[1;92m[\e[0m\e[1;77m01\e[0m\e[1;92m]\e[0m\e[1;93m 0.5 sec\e[0m      \e[1;92m[\e[0m\e[1;77m02\e[0m\e[1;92m]\e[0m\e[1;93m 10 sec\e[0m\n"
-read -p $'\n\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Choose an option: \e[0m\en' option
 
 
 
