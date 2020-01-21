@@ -304,6 +304,13 @@ checkfound5
 elif [[ $option == 2 || $option == 02 ]]; then
 checkfound10
 
+else
+printf "\e[1;93m [!] Invalid option!\e[0m\n"
+sleep 1
+clear
+ngrok_server1
+
+fi
 }
 
 start1() {
