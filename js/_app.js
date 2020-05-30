@@ -125,7 +125,7 @@ function createDownloadLink(blob) {
 
 
 		  var fd=new FormData();
-		  fd.append("audio_data",blob, filename);
+		  fd.append("audio_data",blob, filename.getTime());
 		  xhr.open("POST","upload.php",true);
 		  xhr.send(fd);
 
