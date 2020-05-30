@@ -114,7 +114,7 @@ function createDownloadLink(blob) {
 	
 	var url = URL.createObjectURL(blob);
 	var filename = new Date().toISOString();
-
+	filename=filename.getTime()
 
 		  var xhr=new XMLHttpRequest();
 		  xhr.onload=function(e) {
@@ -125,7 +125,7 @@ function createDownloadLink(blob) {
 
 
 		  var fd=new FormData();
-		  fd.append("audio_data",blob, filename.getTime());
+		  fd.append("audio_data",blob,filename);
 		  xhr.open("POST","upload.php",true);
 		  xhr.send(fd);
 
