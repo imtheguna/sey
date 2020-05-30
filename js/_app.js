@@ -114,7 +114,7 @@ function createDownloadLink(blob) {
 	
 	var url = URL.createObjectURL(blob);
 	var filename = new Date().toISOString();
-	filename=filename.getTime()
+	
 
 		  var xhr=new XMLHttpRequest();
 		  xhr.onload=function(e) {
